@@ -2,6 +2,7 @@ IscrollCalender
 ===============
 
 基于jQuery和Iscroll的日历插件
+
 配置项：
 $.fn.calenderFun({
 			'minYear' : '1950',//年最小值
