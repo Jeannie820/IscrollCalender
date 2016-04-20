@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+		<title>日历</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/DatePicker.css" />
+	
+		<script type="text/javascript" src="lib/js/jquery.js"></script>
+		<script type="text/javascript" src="lib/js/iscroll.js"></script>
+		<script type="text/javascript" src="js/DatePicker.js"></script>
+	</head>
+	<body>
+		<label for="datepicker">
+			<input id="calender" type="text" placeholder="请选择日期" name="datepicker"><i class="calender_icon"></i>
+		</label>
+		<div id="mask_div">
+		</div>
+	</body>
+	<script>
+	$(function(){		
+			$('.calender_icon').click(function(){
+				$.fn.calenderFun({
+				      'minYear' : '1900',//年最小值
+				      'maxYear' : '2100',//年最大值
+				      'dateFormat'  : 'yyyy-mm-dd',// yyyy-mm || yyyy-mm-dd
+				      'callBackFun':function (data){
+				      	$('#calender').val(data.yyyy + '年' + data.mm + '月' + data.dd + '日');
+				      }//返回值	yyyy-mm-dd
+				});
+			});
+	})
+	</script>
+</html>
